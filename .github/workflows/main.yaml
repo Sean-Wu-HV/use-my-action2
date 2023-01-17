@@ -14,6 +14,10 @@ jobs:
           echo $(mkdir test123)
           
       - uses: actions/checkout@v3
+      
+      - name: install poetry
+        run: |
+         pip3 install poetry
           
       - name: Python bump version
         id: hello
