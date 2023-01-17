@@ -1,3 +1,14 @@
+[tool.poetry]
+name = "my-sean-testing-package"
+version = "1.0.1"
+description = ""
+authors = ["Sean Wu <sean.wu@hitachivantara.com>"]
+readme = "README.md"
+packages = [{include = "src/example_package_test"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
 [build-system]
-requires = ["setuptools>=42"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

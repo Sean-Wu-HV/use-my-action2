@@ -1,0 +1,3 @@
+import example_package_test
+
+print(example_package_test.AClass)

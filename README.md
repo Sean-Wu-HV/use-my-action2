@@ -1,5 +1,8 @@
 # Example Package
 
-This is a simple example package. You can use
-[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
-to write your content.
+For poetry testpypi url use: https://test.pypi.org/legacy/, don't end with simple/
+
+set pypitoken with: `poetry config poetry config pypi-token.testpypi pypi-xxxx`
+`poetry config repositories.testpypi https://test.pypi.org/legacy/`
+
+then `poetry publish -r testpypi`
