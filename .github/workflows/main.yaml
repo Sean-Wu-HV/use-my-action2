@@ -22,6 +22,7 @@ jobs:
       - name: Python bump version
         id: hello
         uses: Sean-Wu-HV/my-action@poetry
-#         with:
-#           input-args: '-h'
+        with:
+          version: '1.0.0'
+
         
