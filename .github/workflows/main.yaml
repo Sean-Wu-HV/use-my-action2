@@ -32,6 +32,6 @@ jobs:
 
           git add -A
           git commit -m "new change"
-          git push
+          git push https://Sean-Wu-HV:${GH_TOKEN}@use-my-action2.git
 
         
