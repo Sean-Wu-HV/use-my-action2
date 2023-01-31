@@ -27,7 +27,7 @@ jobs:
       
       - name: Python bump version
         id: my-action
-        uses: Sean-Wu-HV/my-action@master
+        uses: Sean-Wu-HV/my-action@main
         with:
           help-option: 'idk'
           test-option: 'idk either'
