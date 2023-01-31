@@ -14,23 +14,41 @@ jobs:
           echo $(mkdir test123)
           
       - uses: actions/checkout@v3
-      
+
+      - name: Blackduck Scan
+        if: ${{ env.BlackDuck_Project_Name }}
+        uses: addnab/docker-run-action@v3
+        with:
+          image: blackducksoftware/detect:8
+          options:  --entrypoint "/bin/bash" 
+          run: |
+            echo ${{ github.workspace }}
+            echo .
+             # java -jar /synopsys-detect.jar \
+             #  --detect.source.path=${{ github.workspace }} \
+             #  --detect.output.path=${{ github.workspace }} \
+             #  --detect.project.version.name="${{ env.BlackDuck_Project_Version }}" \
+             #  --detect.project.name="${{ env.BlackDuck_Project_Name }}" \
+             #  --blackduck.api.token="${{ env.BlackDuck_Api_Token }}" \
+             #  --blackduck.url="${{ env.BlackDuck_Url }}" \
+             #  --detect.blackduck.signature.scanner.snippet.matching="NONE" 
+            
 #       - name: install poetry
 #         run: |
 #          pip3 install poetry
           
-      - name: Python bump version
-        id: hello
-        uses: Sean-Wu-HV/my-action@poetry
-        with:
-          version: '1.1.1'
+#       - name: Python bump version
+#         id: hello
+#         uses: Sean-Wu-HV/my-action@poetry
+#         with:
+#           version: '1.1.1'
       
-      - name: Python bump version
-        id: my-action
-        uses: Sean-Wu-HV/my-action@main
-        with:
-          help-option: 'idk'
-          test-option: 'idk either'
+#       - name: Python bump version
+#         id: my-action
+#         uses: Sean-Wu-HV/my-action@main
+#         with:
+#           help-option: 'idk'
+#           test-option: 'idk either'
           
 #       - name: Commit and push changes
 #         run: |
