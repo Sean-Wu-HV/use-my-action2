@@ -24,14 +24,21 @@ jobs:
         uses: Sean-Wu-HV/my-action@poetry
         with:
           version: '1.1.1'
+      
+      - name: Python bump version
+        id: my-action
+        uses: Sean-Wu-HV/my-action@master
+        with:
+          help-option: 'idk'
+          test-option: 'idk either'
           
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "Sean-Wu-HV"
-          git config --global user.email "sean840411@gmail.com"
+#       - name: Commit and push changes
+#         run: |
+#           git config --global user.name "Sean-Wu-HV"
+#           git config --global user.email "sean840411@gmail.com"
 
-          git add -A
-          git commit -m "new change"
-          git push https://Sean-Wu-HV:${GH_TOKEN}@github.com/Sean-Wu-HV/use-my-action2.git
+#           git add -A
+#           git commit -m "new change"
+#           git push https://Sean-Wu-HV:${GH_TOKEN}@github.com/Sean-Wu-HV/use-my-action2.git
 
         
