@@ -22,8 +22,10 @@ jobs:
           options:  --entrypoint "/bin/bash" 
           run: |
             echo ${{ github.workspace }}
-            echo ls -la ${{ github.workspace }}
-            echo ls -la 
+            echo "ls -la ${{ github.workspace }}"
+            echo pwd
+            echo ls -la
+            echo ls -la /
              # java -jar /synopsys-detect.jar \
              #  --detect.source.path=${{ github.workspace }} \
              #  --detect.output.path=${{ github.workspace }} \
