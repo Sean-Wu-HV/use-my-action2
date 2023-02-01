@@ -19,7 +19,7 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           image: blackducksoftware/detect:8
-          options: --entrypoint "/bin/bash" -v $GITHUB_WORKSPACE:/source
+          options: --entrypoint "/bin/bash" -v ${{ GITHUB_WORKSPACE }}:/source
           run: |
             echo "ls -la /source $(ls -la /source)"
 
