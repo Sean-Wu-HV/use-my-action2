@@ -24,8 +24,8 @@ jobs:
             echo ${{ github.workspace }}
             echo "$(ls -la ${{ github.workspace }})"
             echo "$(pwd)"
-            echo "$(ls -la)"
-            echo "$(ls -la /)"
+            echo "ls -la $(ls -la)"
+            echo "ls -la / $(ls -la /)"
             echo "ls -la /source $(ls -la /source)"
              # java -jar /synopsys-detect.jar \
              #  --detect.source.path=${{ github.workspace }} \
