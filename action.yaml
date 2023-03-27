@@ -3,9 +3,10 @@ description: "Helm deployment GitHub Action"
 inputs:
 
   CRD_NAME:
+    type: choice
     description: "Custom resource Definition Name"
     required: false
-    defualt: ['abe','def']
+    defualt: "['abe','def']"
 
 runs:
   using: "composite"
@@ -14,10 +15,11 @@ runs:
       - name: Test on arrays
         shell: bash
         run: |
-          for i in "${CRD_NAME[@]}"
+          # ${{ fromJSON('${CRD_NAME}') }}
+          for i in ${{ fromJSON('${CRD_NAME}') }}
           do
             echo $i
           done
           echo CRD_NAME:
-          echo ${CRD_NAME}
+          echo ${{ fromJSON('${CRD_NAME}') }}
           
