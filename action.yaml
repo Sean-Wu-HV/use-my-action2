@@ -16,10 +16,10 @@ runs:
         shell: bash
         run: |
           # ${{ fromJSON('${CRD_NAME}') }}
-          for i in ${{ fromJSON('${CRD_NAME}') }}
-          do
-            echo $i
-          done
+          # for i in ${{ fromJSON('${CRD_NAME}') }}
+          # do
+          #   echo $i
+          # done
           echo CRD_NAME:
           echo ${{ fromJSON('${CRD_NAME}') }}
           
