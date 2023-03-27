@@ -14,9 +14,10 @@ runs:
       - name: Test on arrays
         shell: bash
         run: |
-          for i in ${CRD_NAME}[@]
+          for i in "${CRD_NAME}[@]"
           do
             echo $i
           done
+          echo CRD_NAME:
           echo ${CRD_NAME}
           
