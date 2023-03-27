@@ -12,6 +12,7 @@ runs:
   steps:    
         
       - name: Test on arrays
+        shell: bash
         run: |
           for i in "${CRD_NAME[@]}"
           do
