@@ -4,7 +4,7 @@ inputs:
 
   CRD_NAME:
     description: "Custom resource Definition Name"
-    required: true
+    required: false
     defualt: ['abe','def']
 
 runs:
@@ -14,7 +14,7 @@ runs:
       - name: Test on arrays
         shell: bash
         run: |
-          for i in "${CRD_NAME}[@]"
+          for i in "${CRD_NAME[@]}"
           do
             echo $i
           done
