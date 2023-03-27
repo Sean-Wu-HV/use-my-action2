@@ -17,6 +17,8 @@ jobs:
       
       - name: test array
         uses: Sean-Wu-HV/use-my-action2@composite-action
+#         with:
+#           CRD_NAME: "['test1','test2']"
       
 
 #       - name: Blackduck Scan
