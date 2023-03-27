@@ -6,7 +6,7 @@ inputs:
     type: choice
     description: "Custom resource Definition Name"
     required: false
-    defualt: "[\"abe\",\"def\"]"
+    defualt: ["abe", "def"]
 
 runs:
   using: "composite"
