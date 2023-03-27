@@ -22,5 +22,5 @@ runs:
           # done
           echo CRD_NAME:
           echo ${CRD_NAME}
-          echo ${{ fromJSON(${CRD_NAME}) }}
+          # echo ${{ fromJSON(${CRD_NAME}) }}
           
