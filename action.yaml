@@ -15,11 +15,6 @@ runs:
       - name: Test on arrays
         shell: bash
         run: |
-          # ${{ fromJSON('${CRD_NAME}') }}
-          # for i in ${{ fromJSON('${CRD_NAME}') }}
-          # do
-          #   echo $i
-          # done
           echo CRD_NAME
           # echo ${inputs.CRD_NAME}
           
