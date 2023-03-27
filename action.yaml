@@ -20,6 +20,6 @@ runs:
           # do
           #   echo $i
           # done
-          echo CRD_NAME:
-          echo ${inputs.CRD_NAME}
+          echo CRD_NAME
+          # echo ${inputs.CRD_NAME}
           
