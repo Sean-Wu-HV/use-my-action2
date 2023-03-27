@@ -14,14 +14,23 @@ jobs:
           echo $(mkdir test123)
           
       - uses: actions/checkout@v3
+      
+      - name:
+        run: |
+          echo 'test run array'
+          
+          for i in "${testArray[@]}"
+          do
+            echo $i
+          done
 
-      - name: Blackduck Scan
-        uses: addnab/docker-run-action@v3
-        with:
-          image: blackducksoftware/detect:8
-          options: --entrypoint "/bin/bash" -v $(GITHUB_WORKSPACE):/source
-          run: |
-            echo "ls -la /source $(ls -la /source)"
+#       - name: Blackduck Scan
+#         uses: addnab/docker-run-action@v3
+#         with:
+#           image: blackducksoftware/detect:8
+#           options: --entrypoint "/bin/bash" -v $(GITHUB_WORKSPACE):/source
+#           run: |
+#             echo "ls -la /source $(ls -la /source)"
 
             
 #       - name: install poetry
