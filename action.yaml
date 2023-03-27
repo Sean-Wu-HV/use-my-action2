@@ -16,5 +16,5 @@ runs:
         shell: bash
         run: |
           echo CRD_NAME
-          # echo ${inputs.CRD_NAME}
+          echo ${inputs.CRD_NAME}
           
