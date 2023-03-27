@@ -1,0 +1,20 @@
+name:  "Helm deployment GitHub Action"
+description: "Helm deployment GitHub Action"
+inputs:
+
+  CRD_NAME:
+    description: "Custom resource Definition Name"
+    required: true
+    defualt: ['abe','def']
+
+runs:
+  using: "composite"
+  steps:    
+        
+      - name: Test on arrays
+        run: |
+          for i in "${CRD_NAME[@]}"
+          do
+            echo $i
+          done
+          
