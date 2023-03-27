@@ -3,7 +3,7 @@ description: "Helm deployment GitHub Action"
 inputs:
 
   CRD_NAME:
-    type: choice
+#     type: choice
     description: "Custom resource Definition Name"
     required: false
     defualt: "abe"
