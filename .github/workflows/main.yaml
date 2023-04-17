@@ -15,6 +15,18 @@ jobs:
           
       - uses: actions/checkout@v3
       
+      - name: Slack notification on success
+        uses: hv-actions/slack-action@v2
+        env:
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+        with:
+          title: "testing slack messaging"
+          channel: "general"
+          message: "testing slack messaging"
+          custom-fields: |
+            Status=:sunglasses: SUCCESS
+            Branch=${{ github.ref }}
+      
 
 #       - name: Blackduck Scan
 #         uses: addnab/docker-run-action@v3
