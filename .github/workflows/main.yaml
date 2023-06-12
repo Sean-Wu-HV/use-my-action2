@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   prepare_env:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     name: job name
     steps:
       - name: First step
