@@ -15,6 +15,12 @@ jobs:
           
       - uses: actions/checkout@v3
       
+      - name: print path files
+        run: |
+          ls
+          ls .github
+          ls ../
+      
 
 #       - name: Blackduck Scan
 #         uses: addnab/docker-run-action@v3
